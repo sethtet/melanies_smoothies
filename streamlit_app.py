@@ -46,8 +46,8 @@ if ingredients_list:
     time_to_insert = st.button('Submit Order')
    
     if time_to_insert:
-        cnx = st.connection("snowflake")
-        session = cnx.session()
-        #session.sql(my_insert_stmt).collect()
+        session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered!' + name_on_order)
 
+cnx = st.connection("snowflake")
+        session = cnx.session()
